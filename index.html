@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio JH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap css for spyscroll -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+</head>
+<body data-bs-spy="scroll" data-bs-target=".nav-cont nav ul" data-bs-offset="50" tabindex="0">
+    <video autoplay muted loop id="bg-video">
+        <source src="vid/bgvideo.MP4" type="video/mp4">
+      </video>
+    <div class="cursor"></div>
+
+    <header>
+        <div class="nav-cont">
+            <nav>
+                <ul class="comp-header">
+                    <li><a href="#home" id="link-home" class="active">home</a></li>
+                    <li><a href="#about" id="link-about">about</a></li>
+                    <li><a href="#work" id="link-work">work</a></li>
+                    <li><a href="#contact" id="link-contact">contact</a></li>
+                </ul>
+                <button class="menu-btn" onclick="openSidebar()"><i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+                
+                <!-- sidebar (hidden by default) -->
+                <div class="sidebar" id="sidebar">
+                    <button class="close-btn" onclick="closeSidebar()">×</button>
+                    <ul class="sidebar-links">
+                        <li><a href="#home" onclick="closeSidebar()">home</a></li>
+                        <li><a href="#about" onclick="closeSidebar()">about</a></li>
+                        <li><a href="#work" onclick="closeSidebar()">work</a></li>
+                        <li><a href="#contact" onclick="closeSidebar()">contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="translate">
+            <button onclick="setLanguage('en')">NL</button>
+            <button onclick="setLanguage('nl')">EN</button>
+        </div>
+    </header>
+
+    <section id="home" class="hidden main">
+        <h1 class="title">PORT<br>FOLIO</h1>
+        <p class="p1">Julia Heemskerk<br>software developer | UX/UI design</p>
+    </section>
+
+    <section id="about" class="hidden main">
+        <article class="ab-text-side">
+            <h1 class="title">Hello !</h1>
+            <hr class="line">
+            <p class="paragraph" data-key="about_intro">I’m <span style="color: #4fa1ff;">Julia</span>, 
+                a software development student from The Netherlands with a passion 
+                for creating clean, user-friendly websites. I first got into web development when my dad introduced me to Swift Playground, where I had a lot of fun playing around with while-loops and if-statements. I also spend some time playing around on Codecademy. Even when family members had questions about something not working on their laptop or phone, I was often the first person they came to for help. </p><br>
+            <p class="paragraph" data-key="about_paragraph_2">What I really like about software development is that a software developer can look at a wireframe or mock-up, and based on that can make ideas really come to life. When someone needs adjustments on their websites or has a certain question, they can come to you and you can help them solve their problem. At the moment I’m focused on improving my coding knowledge and am focused on learning back-end and implementing that into front-end. </p><br>
+            <!-- <p class="paragraph"> <span style="color: #4fa1ff; font-weight: 700;">Education: </span><br> I'm currently studying Software Development at MBORijnland</p> -->
+            <div>
+                <ul class="links">
+                    <p style="font-size: 22px;">Contacts and links:</p>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:j.heemskerk.swd@gmail.com" class="hover-underline">j.heemskerk.swd@gmail.com</a></li>
+                    <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/julia-heemskerk-548569367/" target="_blank" class="hover-underline">LinkedIn</a></li>
+                    <li><i class="fa-brands fa-github"></i><a href="https://github.com/newcoder024" target="_blank" class="hover-underline">Github</a></li><br>
+                    <li><a href="" target="_blank" class="cv-btn" style="color: #5dc3ff;" data-key="cv_text">Take a look at my CV <i class="fa-solid fa-download"></i></a></li>
+                </ul>
+            </div>    
+        </article>
+    </section>
+
+    <section id="work" class="hidden main">
+        <article class="work-right">
+            <div>
+                <h1 class="title-work">Skyteller</h1>
+                <div>
+                    <p class="paragraph hid-phone" data-key="work_skyteller_description" style="padding-right: 20px;">A responsive web application that fetches real-time 
+                        weather data using the <a href="https://openweathermap.org/" 
+                        target="_blank" style="color: #4fa1ff; text-decoration: none;">
+                        openweathermap</a> external API. Users can search for any city 
+                        to view current conditions, temperature, and forecasts in a clean, 
+                        intuitive interface. I had fun figuring out how to use API's for the first time.</p>
+                    <div class="details hid-phone">
+                        <div class="detail-p">HTML/CSS</div>
+                        <div class="detail-p">JavaScript</div>
+                        <div class="detail-p">API</div>
+                        <div class="detail-p">Design</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="work-img">
+                <img src="img/work1.png" alt="Skyteller">
+                <div>
+                    <a class="hover-underline" href="https://newcoder024.github.io/api-weather-app/" target="_blank"><i class="fa-solid fa-angle-right"></i> Live link</a>
+                    <a class="hover-underline" href="https://github.com/newcoder024/api-weather-app" target="_blank"><i class="fa-solid fa-angle-right"></i> Github</a>
+                </div>
+            </div>
+            <div class="text-box query-text">
+                <p class="paragraph" data-key="work_skyteller_description">A responsive web application that fetches real-time 
+                    weather data using the <a href="https://openweathermap.org/" 
+                    target="_blank" style="color: #4fa1ff; text-decoration: none;">
+                    openweathermap</a> external API. Users can search for any city 
+                    to view current conditions, temperature, and forecasts in a clean, 
+                    intuitive interface.</p>
+                <div class="details">
+                    <div class="detail-p">HTML/CSS</div>
+                    <div class="detail-p">JavaScript</div>
+                    <div class="detail-p">API</div>
+                    <div class="detail-p">Design</div>
+                </div>
+            </div>
+                
+        </article>
+        <article class="work-left">
+            <h1 class="title-work query-title">Capybara Go</h1>
+            <div class="work-img">
+                <a data-fancybox="gallery-work1" data-src="img/work2slides/work2-s.png" class="work-img">
+                    <img src="img/work2slides/work2-s.png" class="work-img" />
+                  </a>
+
+                <div style="display:none">
+                    <a data-fancybox="gallery-work1" data-src="img/work2slides/work2-start.png" class="work-img">
+                        <img src="img/work2slides/work2-start.png" width="400" height="220" alt="" />
+                      </a>
+                      <a data-fancybox="gallery-work1" data-src="img/work2slides/work2-game.png" class="work-img">
+                        <img src="img/work2slides/work2-game.png" width="400" height="220" alt="" />
+                      </a>
+                    </a>
+                  </div>
+                  <div>
+                    <a class="hover-underline" href="" target="_blank"><i class="fa-solid fa-angle-right"></i> Github</a>
+                  </div>
+
+                <!-- <a href="" target="_blank">> Live link</a> -->
+            </div>
+            <div class="text-box">
+                <h1 class="title-work hid-phone">Capybara Go</h1>
+                <p class="paragraph para-right" data-key="work_capybara_description">A school assignment where we had to create a game using classes and objects. User plays as a capybara and needs to find as much food as possible, all while being chased by spiders. There are hearts around the map that can make you gain health again. There are some bugs, since it was our first big project, but it was a good learning experience. <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+                <div class="details">
+                    <div class="detail-p">HTML/CSS</div>
+                    <div class="detail-p">JavaScript</div>
+                    <div class="detail-p" data-key="work_capybara_tech_1">Animations</div>
+                    <div class="detail-p">Design</div>
+                </div>
+            </div>
+            <div class="text-box query-text">
+                <p class="paragraph para-right" data-key="work_capybara_description">A school assignment where we had to create a game using classes and objects. User plays as a capybara and needs to find as much food as possible, all while being chased by spiders. There are hearts around the map that can make you gain health again. There are some bugs, since it was our first big project, but it was a good learning experience. <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+                <div class="details">
+                    <div class="detail-p">HTML/CSS</div>
+                    <div class="detail-p">JavaScript</div>
+                    <div class="detail-p" data-key="work_capybara_tech_1">Animations</div>
+                    <div class="detail-p">Design</div>
+                </div>
+            </div>
+
+        </article>
+        <article class="work-right">
+            <div>
+                <h1 class="title-work" data-key="work_energy_title">Energy Dashboard</h1>
+                <div>
+                    <p class="paragraph hid-phone" style="padding-right: 20px;" data-key="work_energy_description">During a project week, we were given a number of data and had to create an energy dashboard with it. I worked on visualizing the data on the website using Chart.js, creating charts that made the information easy to understand. This project helped me practise working with data, front-end development and using external libraries to build a functional and user-friendly interface. <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+                    <div class="details hid-phone">
+                        <div class="detail-p" data-key="work_energy_tech_1">Data Visualization</div>
+                        <div class="detail-p">Front-end</div>
+                        <div class="detail-p">Database</div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="work-img">
+                <a data-fancybox="gallery-work2" data-src="img/dashboard/1.png">
+                    <img src="img/dashboard/1.png" class="work-img" alt="" />
+                </a>
+
+                <div style="display:none">
+                    <a data-fancybox="gallery-work2" data-src="img/dashboard/2.png">
+                        <img src="img/dashboard/2.png" width="400" height="220" alt="" />
+                      </a>
+                      <a data-fancybox="gallery-work2" data-src="img/dashboard/3.png">
+                        <img src="img/dashboard/3.png" width="400" height="220" alt="" />
+                      </a>
+                      <a data-fancybox="gallery-work2" data-src="img/dashboard/login.png">
+                        <img src="img/dashboard/login.png" width="400" height="220" alt="" />
+                      </a>
+                      <a data-fancybox="gallery-work2" data-src="img/dashboard/data.png">
+                        <img src="img/dashboard/data.png" width="400" height="220" alt="" />
+                      </a>
+                </div>
+                <div >
+                    <a class="hover-underline" href="https://github.com/DJAVDH/Smart-Energy-Dashboard" target="_blank"><i class="fa-solid fa-angle-right"></i> Github</a>
+                </div>
+                  
+            </div>
+            <div class="text-box query-text">
+                <p class="paragraph" data-key="work_energy_description">During a project week, we were given a number of data and had to create an energy dashboard with it. I worked on visualizing the data on the website using Chart.js, creating charts that made the information easy to understand. This project helped me practise working with data, front-end development and using external libraries to build a functional and user-friendly interface. <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+
+                <div class="details">
+                    <div class="detail-p" data-key="work_energy_tech_1">Data Visualization</div>
+                    <div class="detail-p">Front-end</div>
+                    <div class="detail-p">Database</div>
+                </div>
+            </div>
+                
+        </article>
+
+        <h1 class="title-work wip-title">Work in progress</h1><br>
+        <article class="wip-section">
+            <div class="wip">
+                <h2 class="title title-phone" style="font-size: 49.4px;">ComicVerse</h2>
+
+                <div class="wip-img">
+                    <a data-fancybox="gallery-wip1" data-src="img/wip1/wip.png">
+                        <img src="img/wip1/wip.png" width="600" height="330" alt="Frontpage and comic page" />
+                    </a>
+
+                    <div style="display:none">
+                        <a data-fancybox="gallery-wip1" data-src="img/wip1/wip3.png">
+                            <img src="img/wip1/wip3.png" width="400" height="220" alt="frontpage" />
+                        </a>
+                        <a data-fancybox="gallery-wip1" data-src="img/wip1/wip4.png">
+                            <img src="img/wip1/wip4.png" width="400" height="220" alt="comic page" />
+                        </a>
+                        <a data-fancybox="gallery-wip1" data-src="img/wip1/comic.png">
+                            <img src="img/wip1/comic.png" width="400" height="220" alt="comic details" />
+                        </a>
+                        <a data-fancybox="gallery-wip1" data-src="img/wip1/contact.png">
+                            <img src="img/wip1/contact.png" width="400" height="220" alt="contact page" />
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="paragraph-link" style="padding-left: 45px;">
+                    <h2 class="title title-comp" style="font-size: 49.4px;">ComicVerse</h2>
+                    <p class="paragraph" data-key="work_comicverse_description">We are currently learning about databases, so we had to design a website that we later are going to develop to get a better understanding of how databases work and how to use them ourselves. I designed a comic website where you can take a closer look at comics, and see information like the author, artist, description and links on where to buy the comics. <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+                </div>
+            </div>
+        </article>
+        <article class="wip-section">
+            <div class="wip">
+                <h2 class="title title-phone" style="font-size: 49.4px;">Zelda BOTW game-site</h2>
+                <div class="wip-img">
+                    <a data-fancybox="gallery-wip2" data-src="img/zeldagame.png">
+                        <img src="img/zeldagame.png" width="600" height="330" alt="Frontpage and comic page" />
+                    </a>
+                </div>
+                
+                <div class="paragraph-link" style="padding-left: 45px;">
+                    <h2 class="title title-comp" style="font-size: 49.4px;">Zelda BOTW game-site</h2>
+                    <p class="paragraph" data-key="work_zelda_description">A personal project of mine. I really enjoyed the game Zelda Breath of the Wild, and thought; why not make a website out of it? It's an infographic-style website where you can see the characters, read about the lore, and see the map of the game. I'm only in the design-phase, but am excited to work on it.</p>
+                </div>
+            </div>
+        </article>
+        <article class="wip-section">
+            <div class="wip">
+                <h2 class="title title-phone" style="font-size: 49.4px;">Apothecare website</h2>
+                <div class="wip-img">
+                    <a data-fancybox="gallery-wip3" data-src="img/wip2/apothecare.png">
+                        <img src="img/wip2/apothecare.png" width="600" height="330" alt="Frontpage and comic page" />
+                    </a>
+
+                    <div style="display:none">
+                        <a data-fancybox="gallery-wip3" data-src="img/wip2/wip2-full.png">
+                            <img src="img/wip2/wip2-full.png" width="400" height="220" alt="frontpage" />
+                        </a>
+                        <a data-fancybox="gallery-wip3" data-src="img/wip2/ap-products.png">
+                            <img src="img/wip2/ap-products.png" width="400" height="220" alt="frontpage" />
+                        </a>
+                        <a data-fancybox="gallery-wip3" data-src="img/wip2/wip2-inlog.png">
+                            <img src="img/wip2/wip2-inlog.png" width="400" height="220" alt="comic page" />
+                        </a>
+                        <a data-fancybox="gallery-wip3" data-src="img/wip2/wip2-cart.png">
+                            <img src="img/wip2/wip2-cart.png" width="400" height="220" alt="comic details" />
+                        </a>
+                        <a data-fancybox="gallery-wip3" data-src="img/wip2/wip2-beheerder.png">
+                            <img src="img/wip2/wip2-beheerder.png" width="400" height="220" alt="contact page" />
+                        </a>
+                    </div>
+                    <div>
+                        <a class="hover-underline wiplink" href="https://github.com/JoaSwart/apothecare" target="_blank"><i class="fa-solid fa-angle-right"></i> Take a look at our progress so far</a>
+                    </div>
+
+                </div>
+                
+                <div class="paragraph-link" style="padding-left: 45px;">
+                    <h2 class="title title-comp" style="font-size: 49.4px;">Apothecare website</h2>
+                    <p class="paragraph" data-key="work_apothecare_description">A project we had to work on at school. It's a pharmacy website where you can order products, based on real health complaints, and chat with a chatbot for questions. We are working with Vue, which is actually pretty fun and efficient to work with when you understand how it works.  <span style="font-style: italic; font-weight: 100;">PS: take a closer look by clicking the picture.</span></p>
+                </div>
+            </div>
+        </article>
+
+    </section> 
+
+    <section id="contact" class="hidden main">
+        <h1 class="title" data-key="contact_title">Lets talk !</h1>
+        <form action="https://getform.io/f/aejedprb" method="POST">
+            <label for="name" class="contact-name" data-key="contact_name_label">Full name: </label>
+            <input type="text" name="name"><br>
+            <label for="email" class="contact-name">Email: </label>
+            <input type="email" name="email"><br>
+            <label for="message" class="contact-name" data-key="contact_message_label">Message: </label>
+            <textarea name="message" cols="35" rows="10"></textarea>
+    
+            <p class="contact-name" data-key="contact_email_text">Prefer email? Here's mine: <a href="mailto:j.heemskerk.swd@gmail.com" class="email-call">j.heemskerk.swd@gmail.com</a></p>
+            <button type="submit" class="contact-btn" data-key="contact_submit">Send message</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <p>© 2025 Portfolio JH</p><br>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox]', {});
+    </script>
+        
+</body>
+</html>
